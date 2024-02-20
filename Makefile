@@ -90,7 +90,7 @@ depend-${PROG}:
         $(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
 
 .c.o:
-        $(CC) -c (CFLAGS) $(INCPATH) -o $@ $<
+        $(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
 
 
 #############################################
