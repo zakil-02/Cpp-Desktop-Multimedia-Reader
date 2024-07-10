@@ -6,8 +6,7 @@
 #include <string>
 using namespace std;
 
-class MultimediaObject
-{
+class MultimediaObject{
 public:
     //constructors
     MultimediaObject();
@@ -25,7 +24,8 @@ public:
     void setPath(string path);
 
     //Print the object information
-    void afficher(std::ostream& stream) const;
+    void afficher(ostream& stream) const;
+    
 private:
     string name;
     string path;    

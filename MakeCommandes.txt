@@ -1,0 +1,5 @@
+These are some notes related to makefile use: 
+
+Compilation : Combining .cpp files to produce object & exe files    --> $make
+Execution :                                                         --> $make run 
+Cleaning directory from these process-generated files               --> $make clean

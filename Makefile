@@ -55,25 +55,25 @@ LDLIBS =
 all: ${PROG}
 
 run: ${PROG}
-        ./${PROG}
+	./${PROG}
 
 ${PROG}: depend-${PROG} ${OBJETS}
-        ${CXX} -o $@ ${CXXFLAGS} ${LDFLAGS} ${OBJETS} ${LDLIBS}
+	${CXX} -o $@ ${CXXFLAGS} ${LDFLAGS} ${OBJETS} ${LDLIBS}
 
 clean:
-        -@$(RM) *.o depend-${PROG} core 1>/dev/null 2>&1
+	-@$(RM) *.o depend-${PROG} core 1>/dev/null 2>&1
 
 clean-all: clean
-        -@$(RM) ${PROG} 1>/dev/null 2>&1
+	-@$(RM) ${PROG} 1>/dev/null 2>&1
   
 tar:
-        tar cvf ${PROG}.tar.gz ${SOURCES}
+	tar cvf ${PROG}.tar.gz ${SOURCES}
 
 # Gestion des dependances : creation automatique des dependances en utilisant 
 # l'option -MM de g++ (attention tous les compilateurs n'ont pas cette option)
 #
 depend-${PROG}:
-        ${CXX} ${CXXFLAGS} -MM ${SOURCES} > depend-${PROG}
+	${CXX} ${CXXFLAGS} -MM ${SOURCES} > depend-${PROG}
 
 
 ###########################################
@@ -84,13 +84,13 @@ depend-${PROG}:
 .SUFFIXES: .cpp .cxx .c
 
 .cpp.o:
-        $(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
 
 .cxx.o:
-        $(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
 
 .c.o:
-        $(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
+	$(CC) -c (CFLAGS) $(INCPATH) -o $@ $<
 
 
 #############################################
