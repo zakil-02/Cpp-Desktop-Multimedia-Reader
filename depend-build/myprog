@@ -1,0 +1,3 @@
+multimediaObject.o: src/multimediaObject.cpp \
+ src/..\include\multimediaObject.h
+main.o: src/main.cpp src/..\include\multimediaObject.h
