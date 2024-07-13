@@ -13,19 +13,21 @@ public:
     MultimediaObject(string name, string path);
 
     //destructor
-    ~MultimediaObject();
+    virtual ~MultimediaObject();
 
     //getters
-    string getName();
-    string getPath();
+    string getName() const;
+    string getPath() const;
 
     //setters
     void setName(string name);
     void setPath(string path);
 
     //Print the object information
-    void afficher(ostream& stream) const;
-    
+    virtual void afficher(ostream& stream) const;
+
+    // Pure virtual function to play the multimedia object
+    virtual void play() const = 0;
 private:
     string name;
     string path;    

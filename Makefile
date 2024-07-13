@@ -15,6 +15,7 @@ PROG = build/myprog
 # Fichiers sources (NE PAS METTRE les .h ni les .o seulement les .cpp)
 #
 SOURCES = src/multimediaObject.cpp src/main.cpp
+HEADERS = include/multimediaObject.h include/photoObject.h include/videoObject.h
 
 #
 # Fichiers objets (ne pas modifier sauf si l'extension n'est pas .cpp)
@@ -67,7 +68,7 @@ clean-all: clean
 	-@$(RM) ${PROG} 1>/dev/null 2>&1
   
 tar:
-	tar cvf ${PROG}.tar.gz ${SOURCES}
+	tar cvf ${PROG}.tar.gz ${SOURCES} ${HEADERS}
 
 # Gestion des dependances : creation automatique des dependances en utilisant 
 # l'option -MM de g++ (attention tous les compilateurs n'ont pas cette option)

@@ -23,11 +23,11 @@ MultimediaObject::~MultimediaObject(){
 }
 
 //getters
-string MultimediaObject::getName(){
+string MultimediaObject::getName() const{
     return name;
 }
 
-string MultimediaObject::getPath(){
+string MultimediaObject::getPath() const{
     return path;
 }
 
@@ -46,5 +46,3 @@ void MultimediaObject::afficher(ostream& stream) const{
     stream << "Name: " << name << endl;
     stream << "Path: " << path << endl;
 }
-
-
