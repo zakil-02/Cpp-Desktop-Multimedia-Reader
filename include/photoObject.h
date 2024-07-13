@@ -35,9 +35,23 @@ public:
     }
 
     // Play the photo
-    void play() const override {
-        string command = "mspaint " + getPath() + " &";
-        system(command.c_str());
+    void play(string sys) const override {
+        if (sys == "linux") {
+            string command = "imagej " + getPath() + " &";
+            system(command.c_str());
+            return;
+        }else if (sys == "windows") {
+            string command = "mspaint " + getPath() + " &";
+            system(command.c_str());
+            return;
+        }else if (sys == "mac") {
+            string command = "open " + getPath() + " &";
+            system(command.c_str());
+            return;
+        }else {
+            cerr << "Unsupported system" << endl;
+            return;
+        }
     }
 };
 

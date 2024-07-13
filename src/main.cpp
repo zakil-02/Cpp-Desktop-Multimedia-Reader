@@ -25,13 +25,13 @@ int main(int argc, const char* argv[])
     Photo photo("Mee", "C:/Users/akilh/OneDrive/Bureau/TELECOM_2A/UE_Electives_crD/INF224-ParadigmesDeProgrammation/pdp.jpg", 48.8584, 2.2945);
     cout << "Photo object:" << endl;
     photo.afficher(cout);
-    photo.play();
+    photo.play("windows");
 
     cout << "----------------" << std::endl;
     
     Video video("Street Video", "C:/Users/akilh/OneDrive/Bureau/TELECOM_2A/UE_Electives_crD/INF224-ParadigmesDeProgrammation/street.mp4", 120);
     cout << "Video object:" << endl;
     video.afficher(cout);
-    video.play();
+    video.play("windows");
     return 0;
 }

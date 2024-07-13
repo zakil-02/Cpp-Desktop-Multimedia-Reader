@@ -27,7 +27,7 @@ public:
     virtual void afficher(ostream& stream) const;
 
     // Pure virtual function to play the multimedia object
-    virtual void play() const = 0;
+    virtual void play(string sys) const = 0;
 private:
     string name;
     string path;    
