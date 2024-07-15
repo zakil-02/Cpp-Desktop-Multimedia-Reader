@@ -65,6 +65,8 @@ public:
             stream << "Chapter " << i + 1 << " duration: " << chapters[i] << " seconds" << endl;
         }
     }
+
+    // Play the specified chapter of the film : TODO
 };
 
 #endif // FILMOBJECT_H

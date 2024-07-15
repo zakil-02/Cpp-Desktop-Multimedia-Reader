@@ -40,5 +40,10 @@ int main(int argc, const char* argv[])
         media->afficher(cout);
         media->play("windows");
     }
+
+    // Accessing the chapters of the film
+
+    
+
     return 0;
 }
